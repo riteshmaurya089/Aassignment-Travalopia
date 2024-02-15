@@ -9,7 +9,7 @@ This is a simple website named "Green Planet" with a stylish design. It features
   - The button triggers a custom alert when clicked.
 - **Custom Alert:** A stylish alert with the message "Hello, World!" is displayed when the button is clicked.
   - It includes a close button to dismiss the alert.
-- **Footer:** Contains contact information or links.
+- **Footer:** Contains creator name.
 
 ## Technologies Used
 
@@ -28,6 +28,3 @@ This is a simple website named "Green Planet" with a stylish design. It features
 - Gradient colors: Generated using [UI Gradients](https://uigradients.com/)
 - Font: Arial, sans-serif
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
