@@ -11,6 +11,9 @@ This is a simple website named "Green Planet" with a stylish design. It features
   - It includes a close button to dismiss the alert.
 - **Footer:** Contains creator name.
 
+## Deployment
+https://aassignment-travalopia.vercel.app/
+
 ## Technologies Used
 
 - HTML
