@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Planet</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .header, .footer {
+      height: 100px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(to right, #3a50b4, #2e912e, #fcb045);
+      background-size: 200% 100%;
+      animation: gradientBG 10s linear infinite;
+    }
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .header h1, .footer h1 {
+      margin: 0;
+      font-size: 24px;
+      background: -webkit-linear-gradient(#eee, #a1548d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .footer {
+      box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      flex-grow: 1;
+      position: relative;
+    }
+    .background-image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 1;
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    .button {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #0fad73;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      z-index: 1;
+      font-size: 24px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .custom-alert {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .custom-alert h2 {
+      margin-top: 0;
+      color: #4CAF50; 
+      font-size: 36px; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      animation: bounce 0.5s ease forwards; 
+    }
+    @keyframes bounce {
+      0% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .custom-alert button {
+      background-color: #af4c89; 
+      color: white; 
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px; 
+      transition: background-color 0.3s ease; 
+    }
+    .custom-alert button:hover {
+      background-color: #07940e;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Welcome to Green Planet</h1>
+  </div>
+  <div class="content">
+    <img class="background-image" src="img2_small.jpg" srcset="img2_small.jpg 768w, img2_medium.jpg 1200w, img2_large.jpg 1920w" alt="Background Image">
+    <div class="overlay"></div>
+    <h1 class="title">Green Planet</h1>
+    <button class="button" onclick="showCustomAlert()">Click here</button>
+    <div class="custom-alert" id="customAlert">
+      <h2>Hello, World!</h2>
+      <button onclick="hideCustomAlert()">Close</button>
+    </div>
+  </div>
+  <div class="footer">
+    <h1>Developed with ❤️ by Ritesh Maurya.</h1>
+  </div>
+</div>
+
+<script>
+function showCustomAlert() {
+  document.getElementById("customAlert").style.display = "block";
+}
+
+function hideCustomAlert() {
+  document.getElementById("customAlert").style.display = "none";
+}
+</script>
+
+</body>
+</html>
