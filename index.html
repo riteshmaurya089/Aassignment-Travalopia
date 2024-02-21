@@ -57,10 +57,14 @@
       position: relative;
     }
     .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      position: absolute;
-    }
+      object-fit: cover;
+      z-index: 1;
+  }
     .overlay {
       width: 100%;
       height: 100%;
@@ -159,7 +163,7 @@
     <h1>Welcome to Green Planet</h1>
   </div>
   <div class="content">
-    <img class="background-image" src="img2_small.jpg" srcset="img2_small.jpg 768w, img2_medium.jpg 1200w, img2_large.jpg 1920w" alt="Background Image">
+    <img src="img7.jpg" alt="Background Image" class="background-image">
     <div class="overlay"></div>
     <h1 class="title">Green Planet</h1>
     <button class="button" onclick="showCustomAlert()">Click here</button>
